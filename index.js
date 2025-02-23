@@ -1,23 +1,30 @@
-require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
-const bodyParser = require('body-parser');
-const db = require('./db');
+const dotenv = require('dotenv');
+const authRoutes = require('./routes/auth');
+const productRoutes = require('./routes/products');
+const orderRoutes = require('./routes/orders');
 
+dotenv.config();
 const app = express();
+
+// Middleware
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-// Import routes
-const produkRoutes = require('./routes/produk');
-const userRoutes = require('./routes/user');
+// Database Connection
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
 
-// Menggunakan routes
-app.use('/api/produk', produkRoutes);
-app.use('/api/user', userRoutes);
+// Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Server berjalan di port ${PORT}`);
-});
-
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
