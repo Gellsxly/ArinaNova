@@ -1,0 +1,13 @@
+body {
+    font-family: cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main-colour {
+    background-color : peachpuff !important;
+}
+
+.banner{
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../image/banner3.jpg');
+    
+}

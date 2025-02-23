@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArinaNova</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .navbar-nav .nav-item {
+            text-align: center;
+            font-size: 12px; /* Reducing font size */
+            margin: 0 10px; /* Reducing spacing between options */
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dakr bzg-dark main-colour">
+    <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand" href="#"><b>ArinaNova</b></a>
+        <div style="width: 50%;">
+            <form class="d-flex" onsubmit="searchProduct(event)">
+                <input class="form-control me-2" type="search" placeholder="Search products" aria-label="Search" id="searchInput">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+        <a class="btn btn-primary btn-sm" href="#">Sign In / Sign Up</a>
+    </div>
+</nav>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                        <li><a class="dropdown-item" href="#">Our Products</a></li>
+                        <li><a class="dropdown-item" href="#">Used Products</a></li>
+                        <li><a class="dropdown-item" href="#">New Products</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sell Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trade-In</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                        <li><a class="dropdown-item" href="#">Men</a></li>
+                        <li><a class="dropdown-item" href="#">Women</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Banner-->
+<div class="container-fluid banner d-flex align-items-center">
+    <div class="container">
+        <h1 class="text-light display-4">Welcome to ArinaNova</h1>
+        <h2 class="text-light fs-5">Temukan gaya terbaikmu dengan koleksi fashion terbaru dari Arinanova! <br> Kami menghadirkan pakaian, 
+            aksesori, dan tren terkini untuk menunjang penampilanmu, baik untuk gaya kasual, formal, maupun streetwear.
+        </h2>
+    </div>
+</div>
+
+<!--Product-->
+<div class="conteriner-fluid py-5">
+    <div class="conteiner">
+        <h2 class="text-center">Our Products</h2>
+
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <div class="card ms-5">
+                    <img src="image/product/sepatu.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Air Jordan 4 Retro 'Military Black</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, natus!</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card ms-5">
+                    <img src="image/product/sepatu.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Air Jordan 4 Retro 'Military Black</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, natus!</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card ms-5">
+                    <img src="image/product/sepatu.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Air Jordan 4 Retro 'Military Black</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, natus!</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card ms-5">
+                    <img src="image/product/sepatu.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Air Jordan 4 Retro 'Military Black</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, natus!</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function searchProduct(event) {
+        event.preventDefault(); // Prevent page reload
+        const query = document.getElementById('searchInput').value;
+        if (query.trim() !== '') {
+            window.location.href = `/search?query=${encodeURIComponent(query)}`;
+        }
+    }
+</script>
+
+<script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
